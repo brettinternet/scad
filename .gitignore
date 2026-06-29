@@ -1,0 +1,16 @@
+# Generated OpenSCAD outputs
+build/
+*.stl
+*.3mf
+*.amf
+*.off
+*.csg
+*.dxf
+*.svg
+*.png
+
+# Task cache
+.task/
+
+# macOS
+.DS_Store

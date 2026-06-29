@@ -1,0 +1,33 @@
+version: '3'
+
+vars:
+  MODEL: models/flowerpot-hole-support.scad
+  STL: build/flowerpot-hole-support.stl
+
+tasks:
+  default:
+    desc: Show available tasks
+    cmds:
+      - task --list
+
+  check:
+    desc: Verify OpenSCAD and Task are available
+    cmds:
+      - openscad --version
+      - task --version
+
+  render:
+    desc: Render the flowerpot support STL
+    deps: [check]
+    cmds:
+      - mkdir -p build
+      - openscad -o {{.STL}} {{.MODEL}}
+    sources:
+      - '{{.MODEL}}'
+    generates:
+      - '{{.STL}}'
+
+  clean:
+    desc: Remove generated models
+    cmds:
+      - rm -rf build
