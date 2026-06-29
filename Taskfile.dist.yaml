@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 vars:
   MODEL: models/flowerpot-hole-support.scad
@@ -22,9 +22,9 @@ tasks:
       Usage:
         task open -- models/flowerpot-hole-support.scad
     vars:
-      TARGET: '{{default .MODEL .CLI_ARGS}}'
+      TARGET: "{{default .MODEL .CLI_ARGS}}"
     cmds:
-      - nohup openscad '{{.TARGET}}' >/dev/null 2>&1 &
+      - openscad "{{.TARGET}}"
 
   render:
     desc: Render the flowerpot support STL
@@ -33,9 +33,9 @@ tasks:
       - mkdir -p build
       - openscad -o {{.STL}} {{.MODEL}}
     sources:
-      - '{{.MODEL}}'
+      - "{{.MODEL}}"
     generates:
-      - '{{.STL}}'
+      - "{{.STL}}"
 
   clean:
     desc: Remove generated models
