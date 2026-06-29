@@ -1,5 +1,5 @@
 // Flowerpot support for a 3 7/8 inch hole.
-// Units: millimeters. Print flat with the broad U shape on the bed; the shallow profile extends in negative Y.
+// Units: millimeters. Print flat with the broad U shape on the bed; low profile is controlled by plate thickness.
 
 $fn = 64;
 
@@ -10,8 +10,8 @@ hole_width = 3.875 * inch;
 fit_clearance = 1.2;
 body_outer_width = hole_width - fit_clearance;
 rail_width = 10;
-plate_thickness = 6;
-u_depth = 38;
+plate_thickness = 3.6;
+u_depth = 78;
 
 wing_overhang = 18;
 wing_depth = 18;
