@@ -11,6 +11,9 @@ build/
 
 # Task cache
 .task/
+/Taskfile.yaml
+/Taskfile.yml
+mise.local.toml
 
 # macOS
 .DS_Store
