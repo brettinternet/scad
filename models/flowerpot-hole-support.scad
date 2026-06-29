@@ -6,8 +6,8 @@ $fn = 180;
 inch = 25.4;
 cm = 10;
 
-inner_radius = 3.7 * inch;
-outer_radius = 4.5 * inch;
+inner_radius = 3.7 * inch / 2;
+outer_radius = 4.5 * inch / 2;
 plate_thickness = 0.25 * cm;
 
 assert(inner_radius > 0, "Inner radius must be positive.");
