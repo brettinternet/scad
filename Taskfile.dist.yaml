@@ -3,7 +3,6 @@ version: '3'
 vars:
   MODEL: models/flowerpot-hole-support.scad
   STL: build/flowerpot-hole-support.stl
-  OPENSCAD_APP: OpenSCAD
 
 tasks:
   default:
@@ -18,14 +17,14 @@ tasks:
       - task --version
 
   open:
-    desc: Open a model in a fresh OpenSCAD window on macOS
+    desc: Open a model in OpenSCAD GUI
     summary: |
       Usage:
         task open -- models/flowerpot-hole-support.scad
     vars:
       TARGET: '{{default .MODEL .CLI_ARGS}}'
     cmds:
-      - open -n -a '{{.OPENSCAD_APP}}' '{{.TARGET}}'
+      - nohup openscad '{{.TARGET}}' >/dev/null 2>&1 &
 
   render:
     desc: Render the flowerpot support STL
