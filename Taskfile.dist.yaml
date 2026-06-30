@@ -1,8 +1,8 @@
 version: "3"
 
 vars:
-  MODEL: models/flowerpot-hole-support.scad
-  STL: build/flowerpot-hole-support.stl
+  MODEL: projects/flowerpot-hole-support/adapter.scad
+  STL: build/flowerpot-hole-support-adapter.stl
 
 tasks:
   default:
@@ -20,7 +20,7 @@ tasks:
     desc: Open a model in OpenSCAD GUI
     summary: |
       Usage:
-        task open -- models/flowerpot-hole-support.scad
+        task open -- projects/flowerpot-hole-support/adapter.scad
     vars:
       TARGET: "{{default .MODEL .CLI_ARGS}}"
     cmds:

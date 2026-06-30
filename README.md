@@ -1,3 +1,3 @@
 # SCAD
 
-My SCAD models for around the house.
+My SCAD projects for around the house.
